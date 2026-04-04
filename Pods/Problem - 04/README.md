@@ -35,6 +35,10 @@ cat /etc/nginx/nginx.conf
 ```bash
 sudo kubectl get pods -A
 ```
+OR
+```bash
+sudo kubectl get pods --all-namespaces
+```
 
 ## Show only pod names in output
 ```bash
