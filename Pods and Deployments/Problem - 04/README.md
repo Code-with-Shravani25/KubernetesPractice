@@ -35,3 +35,8 @@ cat /etc/nginx/nginx.conf
 ```bash
 sudo kubectl get pods -A
 ```
+
+## Show only pod names in output
+```bash
+sudo kubectl get pods -o jsonpath="{.items[*].metadata.names}
+```
