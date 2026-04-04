@@ -34,6 +34,8 @@ sudo kubectl label pod <pod-name> -n <ns-name> <key>=<value>
 ```bash
 sudo kubectl label pod <pod-name> <key>=<newvalue> --overwrite
 ```
+- If label is not available it appends and keeps other same labels same
+- If label is already available it will just change the value of matching key and keeps other labels as it is.
 
 ## List labels of Pods
 ```bash
