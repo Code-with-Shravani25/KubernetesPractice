@@ -30,6 +30,20 @@ sudo kubectl apply -f deployment.yaml
 ```
 ## Create ClusterIP service
 ```bash
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx
+  ports:
+    - port: 80
+      targetPort: 80
+```
+## Apply Service
+```bash
 sudo kubectl apply -f clusterip.yaml
 ```
 ## Verify Service
