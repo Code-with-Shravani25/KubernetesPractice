@@ -40,3 +40,8 @@ sudo kubectl get pods -A
 ```bash
 sudo kubectl get pods -o jsonpath="{.items[*].metadata.names}
 ```
+
+## Create a pod from a given YAML file named custom-pod.yaml (Means apply)
+```bash
+sudo kubectl apply -f custom-pod.yaml
+```
