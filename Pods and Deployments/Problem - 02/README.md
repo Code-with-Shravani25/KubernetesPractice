@@ -13,7 +13,7 @@ sudo kubectl get namespaces
 ## Create namespace using yaml
 ```bash
 apiVersion: v1
-Kind: Namespace
+kind: Namespace
 metadata:
   name: aap-ns
 ```
