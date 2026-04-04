@@ -45,3 +45,24 @@ sudo kubectl get pods -o jsonpath="{.items[*].metadata.names}
 ```bash
 sudo kubectl apply -f custom-pod.yaml
 ```
+
+## Check logs of a failing pod
+```bash
+sudo kubectl logs <pod-name>
+```
+- Logs are available only after the pod has been created (via YAML or command).
+
+## Exec into a running pod and check processes
+```bash
+sudo kubectl exec -it <pod-name> -- /bin/bash
+ps aux
+```
+OR
+```bash
+ps
+```
+- If image is minimal it wont have ps then use ls /proc
+```bash
+sudo kubectl exec -it <pod-name> -- /bin/bash
+ls /proc
+```
