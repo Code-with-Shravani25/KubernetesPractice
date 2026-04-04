@@ -22,3 +22,15 @@ spec:
         ports:
         - containerPort: 80
 ```
+## Apply
+```bash
+sudo kubectl apply -f deployment.yaml
+```
+
+## Verify
+```bash
+sudo kubectl exec -it <pod-name> -- /bin/bash
+apt update
+apt install curl -y
+curl http://localhost #To check apache web page
+```
