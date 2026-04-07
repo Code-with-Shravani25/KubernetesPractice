@@ -53,4 +53,5 @@ sudo kubectl get svc
 ## Test
 ```bash
 sudo kubectl run test-pod --rm -it --image=busybox --sh
+wget -qO- http://<svc-name>
 ```
