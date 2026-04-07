@@ -1,4 +1,8 @@
 # CrashLoopBackOff
+
+- CrashLoopBackOff means kubernetes tries to restart a container multiple times, but it keeps crashing.
+- Container inside pod keeps crashing repeatedly in loop.
+ 
 ---
 ## Create a pod that crashes intentionally and check.
 
