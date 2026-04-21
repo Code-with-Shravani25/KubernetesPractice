@@ -22,6 +22,6 @@ sudo kubectl apply -f configmap.yaml
 
 ## Verify
 ```bash
-sudo kubectl get configmap <configname>
-sudo describe configmap <configname>
+sudo kubectl get configmap <configname> #here its game-demo
+sudo kubectl describe configmap <configname>
 ```
