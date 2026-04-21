@@ -5,12 +5,14 @@
 
 ---
 ## Create configmap with key APP_ENV=production
+```bash
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: game-demo
 data:
   APP_ENV: production
+```
 
 ---
 ## Apply
