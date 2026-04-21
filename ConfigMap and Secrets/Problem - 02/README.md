@@ -25,3 +25,6 @@ sudo kubectl create configmap app-config-file --from-file=app.txt
 kubectl get configmap
 kubectl describe configmap <configmap-name> -file
 ```
+
+- --from-literal : Direct key value pairs
+- --from-literal : Stores file content as value
