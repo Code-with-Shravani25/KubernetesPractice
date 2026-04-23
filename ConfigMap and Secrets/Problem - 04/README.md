@@ -43,5 +43,5 @@ sudo kubectl apply -f mountedvolume.yaml
  ## Verify
  ```bash
 sudo kubectl exec -it <podname> -- /bin/bash
-/etc/config/APP_ENV # inside container
+cat /etc/config/APP_ENV # inside container
 ```
