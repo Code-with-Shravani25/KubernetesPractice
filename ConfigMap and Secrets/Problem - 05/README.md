@@ -30,13 +30,13 @@ spec:
     - name: SECRET_USERNAME
       valueFrom:
         secretKeyRef:
-          name: secret-sa-sampl #secret name
-          key: backend-username
+          name: secret-sa-sample
+          key: username
     - name: SECRET_PASSWORD
       valueFrom:
         secretKeyRef:
-          name: secret-sa-sampl #secret name
-          key: backend-username
+          name: secret-sa-sample
+          key: password
 ```
 
 ## Verify
