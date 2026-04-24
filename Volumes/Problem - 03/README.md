@@ -63,3 +63,46 @@ sudo kubectl get pvc
 ```
 - Output should show:
 - STATUS: BOUND.
+
+## Use PVC in pod
+---
+```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+        - name: Storage
+          mountPath: /data
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: my-pvc
+```
+
+## Apply
+```bash
+sudo kubectl apply -f pvc-pod.yaml
+```
+
+## Write data inside pod
+```bash
+sudo kubectl exec -it pypod -- sh
+echo "Persistent Data" > /data/test.txt
+cat /data/test.txt
+```
+- Delete the pod
+- Recreate the pod/Reapply the pod
+- Verify the data
+
+```bash
+sudo kubectl exec -it mypod -- sh
+ls /data
+cat /data/test.txt
+```
+
+ 
