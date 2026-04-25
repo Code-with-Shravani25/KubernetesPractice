@@ -22,3 +22,8 @@
 - Can my app handle requests right now?
 - If readiness probe fails --> Pod is removed from service
 - No traffic is sent to it.
+- Readiness probe will mark pod not ready --> stop traffic
+- Example Scenario:
+  - App is still starting
+  - App depends on DB connection
+  - App is overloaded temporarily 
