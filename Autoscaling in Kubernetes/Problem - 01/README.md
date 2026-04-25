@@ -18,7 +18,11 @@
   - Metrics server is NOT always installed by default — sometimes it is, sometimes you must install it yourself.
   - It is already present in manages kubernetes like EKS, AKS (azure), GKE (Google)
   - In self maanged clusters you need to install
-- To check in clusters:
+  ## Why metrics server is required
+- Metrics Server is required because it collects CPU and memory usage from nodes and pods and exposes it to the Kubernetes API.
+- The Horizontal Pod Autoscaler depends on this data to make scaling decisions. Without Metrics Server, HPA cannot function and kubectl top commands will not work.
+ ---
+- To check metrics server installed in clusters:
 ```bash
 kubectl get pods -n kube-system
 ```
