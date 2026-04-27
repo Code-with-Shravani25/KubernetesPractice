@@ -74,7 +74,7 @@ kubectl delete service <service-name>
 
 ```bash
 kubectl logs <pod-name>
-kubectl logs -f <pod-name>
+kubectl logs -f <pod-name> #stream logs in real time
 kubectl exec -it <pod-name> -- /bin/bash
 kubectl describe pod <pod-name>
 ```
