@@ -27,3 +27,8 @@
   - App is still starting
   - App depends on DB connection
   - App is overloaded temporarily 
+
+
+- Liveness probe checks container health and restarts it if needed, while readiness probe controls whether a pod receives traffic via a Service.
+- Liveness probe: Focus on internal health of the container
+- Readiness probe: Focus on traffic routing via Services
