@@ -144,11 +144,3 @@ kubectl get ns
 - Use `--watch` to monitor changes live  
 
 ---
-
-## 📚 Conclusion
-
-These commands are essential for:
-
-- Daily operations  
-- Troubleshooting  
-- Kubernetes interviews  
