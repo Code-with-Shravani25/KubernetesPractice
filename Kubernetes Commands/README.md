@@ -121,7 +121,7 @@ kubectl delete -f file.yaml
 
 ```bash
 kubectl get all
-kubectl get all -A
+kubectl get all -A #across all namespace
 ```
 
 ---
