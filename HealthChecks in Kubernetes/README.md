@@ -51,8 +51,8 @@ spec:
       httpGet:
         path: /
         port: 80
-      initialDelaySeconds: 10
-      periodSeconds: 5
+      initialDelaySeconds: 10 #Kubernetes waits 5 seconds after the container starts before running the probe for the first time
+      periodSeconds: 5 #Kubernetes runs the probe every 3 seconds after the first check
 
     readinessProbe:
       httpGet:
