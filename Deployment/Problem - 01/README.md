@@ -37,7 +37,7 @@ sudo kubectl get deployments
 ```bash
 sudo kubectl scale deployment <deployment-name> --replicas=5
 ```
-## Perform rolling update to nginx:latest/ new image bersion
+## Perform rolling update to nginx:latest/ new image version
 ```bash
 sudo kubectl set image deployment/<deploymnet-name> nginx=nginx:latest
 ```
