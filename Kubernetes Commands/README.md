@@ -1,7 +1,5 @@
 # ☸️ Basic Kubernetes Commands
 
-This guide covers commonly used Kubernetes (`kubectl`) commands for beginners.
-
 ---
 
 ## 📌 Cluster Information
