@@ -32,3 +32,62 @@
 - Liveness probe checks container health and restarts it if needed, while readiness probe controls whether a pod receives traffic via a Service.
 - Liveness probe: Focus on internal health of the container
 - Readiness probe: Focus on traffic routing via Services
+- We need to define liveness and readiness probes explicitly in your YAML if you want Kubernetes to perform these health checks. They are not enabled by default.
+- They are defined inside container specifications
+- spec → containers → livenessProbe / readinessProbe
+
+ ## Example in Pod
+ ```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+  - name: app
+    image: nginx
+
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 80
+      initialDelaySeconds: 10
+      periodSeconds: 5
+
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 80
+      initialDelaySeconds: 5
+      periodSeconds: 3
+```
+## Example insode deployment
+```bash
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:   # 👈 Pod template
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: app
+        image: nginx
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+```
