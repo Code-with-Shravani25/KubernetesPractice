@@ -16,7 +16,7 @@ kubectl get nodes
 
 ```bash
 kubectl get pods
-kubectl get pods -o wide
+kubectl get pods -o wide #gives details like pod ips
 kubectl describe pod <pod-name>
 kubectl delete pod <pod-name>
 ```
