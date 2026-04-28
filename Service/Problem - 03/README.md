@@ -22,5 +22,5 @@ kubectl port-forward svc/<service-name> 8080:80
 
 ## To verify: open another terminal and check
 ```bash
-http://localhost:8080
+curl http://localhost:8080
 ```
