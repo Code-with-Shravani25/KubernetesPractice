@@ -1,9 +1,5 @@
 # 🚀 Kubernetes Service Not Reachable – Debugging Guide
 
-## 📌 Overview
-This guide explains how to troubleshoot a **Kubernetes Service that is not reachable**.  
-It covers common issues, debugging steps, and fixes used in real-world scenarios and interviews.
-
 ---
 
 ## 🧠 Concept
