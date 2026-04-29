@@ -17,7 +17,7 @@ spec:
     - name: container1
       image: nginx
       volumeMounts:
-        - name: shared-data
+        - name: shared-data  #same name as of volumes
           mountPath: /usr/share/nginx/html
     - name: container2
       image: busybox
