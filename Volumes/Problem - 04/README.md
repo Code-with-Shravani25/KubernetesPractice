@@ -19,7 +19,7 @@ spec:
   - name: host-volume
     hostPath:
       path: /data   # path on the node
-      type: DirectoryOrCreate
+      type: DirectoryOrCreate # creates automatically if missing or else uses the existing
 ```
 ## Apply
 ```bash
