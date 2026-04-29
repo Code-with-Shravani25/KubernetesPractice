@@ -38,7 +38,7 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
-  hostPath:
+  hostPath:    #In production we typically use cloud-backed storage like EBS, EFS, or CSI drivers. hostPath is mainly for local testing.
       path: /mnt/data
 ```
 
