@@ -27,3 +27,5 @@ args: ["-vm","1","--vm-bytes","200M","--vm-hang,"1"]
 - kubectl get pod <podname> // output: CrashLoopBackOff or Error
 
 - OOM killed happens when a container exceeds its memory limit and its terminated by linux OOM killer.
+
+- polinux/stress: It’s a lightweight container that includes the Linux stress tool.Used to generate CPU, memory, I/O load artificially
